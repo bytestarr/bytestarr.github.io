@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <meta name="description" content="数据中心基础知识" />
+    <meta name="hexo-theme-A4" content="v1.8.9" />
+    <link rel="alternate icon" type="image/webp" href="/img/avatar.png">
+    <title>Starr</title>
+
+    
+        
+<link rel="stylesheet" href="/css/highlight/style1.css">
+
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+        
+        
+<link rel="stylesheet" href="/css/ui.css">
+ 
+        
+<link rel="stylesheet" href="/css/style.css">
+
+
+        
+            <!--返回顶部css-->
+            
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+            
+<link rel="stylesheet" href="/css/unicons.css">
+
+        
+        
+            <!--目录-->
+            
+<link rel="stylesheet" href="/css/toc.css">
+
+        
+    
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.1.1"></head>
+    
+    
+    <body>
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+
+
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/avatar.png" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">Starr</a> 
+            <span class="description">有很多想法的青年</span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">首页</a></li>
+            
+        
+            
+                <li><a href="/list/">文章</a></li>
+            
+        
+            
+                <li><a href="/tags/">标签</a></li>
+            
+        
+            
+                <li><a href="/categories/">分类</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            数据中心基础知识
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><blockquote>
+<p>最近想应聘相关岗位，花一晚上时间整理了一些基础知识</p>
+</blockquote>
+<h2 id="主要设备构成"><a href="#主要设备构成" class="headerlink" title="主要设备构成"></a>主要设备构成</h2><p><a href="/img/dcstructure.png" title="数据中心设备构成" class="gallery-item" style="box-shadow: none;"> <img src="/img/dcstructure.png" alt="数据中心设备构成"></a></p>
+<h3 id="机架（机柜）"><a href="#机架（机柜）" class="headerlink" title="机架（机柜）"></a>机架（机柜）</h3><ul>
+<li>标准机架高度一般为 42U，U 表示 unit，1U 等于 4.445cm</li>
+<li>机架宽度一般为 600mm 或 800mm，深度 600-1200mm 不等</li>
+<li>一般服务器机架更深(1200mm)，通信设备更浅(600mm)</li>
+</ul>
+<h3 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h3><ul>
+<li>指令集：X86、ARM</li>
+<li>形态：塔式、刀片式、机架式</li>
+<li>芯片：CPU、GPU、FPGA、ASIC 等</li>
+</ul>
+<h3 id="供配电"><a href="#供配电" class="headerlink" title="供配电"></a>供配电</h3><p><strong>配电架构</strong></p>
+<ul>
+<li>第一层：接入层配电，高低压配电柜、变压器、柴发等</li>
+<li>第二层：机房配电，低压配电柜、UPS 配电柜、精密空调配电柜</li>
+<li>第三层：机柜配电，列头电源柜或机房母线，PDU 电源，连接器，电源线</li>
+</ul>
+<h3 id="散热制冷"><a href="#散热制冷" class="headerlink" title="散热制冷"></a>散热制冷</h3><p><strong>制冷方式</strong></p>
+<ul>
+<li>房间级制冷</li>
+<li>行级制冷</li>
+<li>机柜级制冷</li>
+</ul>
+<p><strong>制冷形式</strong></p>
+<ul>
+<li>风冷</li>
+<li>液冷（能耗更低）</li>
+</ul>
+<p><strong>PUE(Power Usage Effectiveness)</strong></p>
+<p>$$<br>PUE&#x3D;\frac{数据中心总能耗}{IT设备能耗}<br>$$</p>
+<p>PUE 应尽量小于 1.2</p>
+<h3 id="管理监控"><a href="#管理监控" class="headerlink" title="管理监控"></a>管理监控</h3><p>动环监控(Supervision System)：动力与环境监控，实时监测和管理数据中心各机房的电源柜、UPS、空调、蓄电池等多种动力设备及门磁、红外、窗破、水浸、温湿度、烟感等机房环境的各种参数</p>
+<p>DCIM(Data Center Infrastructure Management)：管理范围更广，监控管理和控制数据中心所有 IT 主设备机配套设施</p>
+<h2 id="数据中心建设"><a href="#数据中心建设" class="headerlink" title="数据中心建设"></a>数据中心建设</h2><p><a href="/img/dcbuilding.png" title="数据中心建设流程" class="gallery-item" style="box-shadow: none;"> <img src="/img/dcbuilding.png" alt="数据中心建设流程"></a></p>
+<h3 id="部署方式"><a href="#部署方式" class="headerlink" title="部署方式"></a>部署方式</h3><p><strong>两地三中心</strong></p>
+<ul>
+<li>生产数据中心</li>
+<li>同城灾备中心</li>
+<li>异地灾备中心</li>
+</ul>
+<p><strong>异地多活</strong></p>
+<h3 id="常见施工步骤"><a href="#常见施工步骤" class="headerlink" title="常见施工步骤"></a>常见施工步骤</h3><table>
+<thead>
+<tr>
+<th align="center">项目</th>
+<th align="center">施工步骤</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">静电地板铺设</td>
+<td align="center">地面施工，放线，地板柱脚，调平，地板安装</td>
+</tr>
+<tr>
+<td align="center">吊顶安装</td>
+<td align="center">放线，龙骨吊杆，主龙骨，骨架，饰板</td>
+</tr>
+<tr>
+<td align="center">强弱电系统</td>
+<td align="center">线缆、线管、桥架敷设，设备安装，调试检测，验收</td>
+</tr>
+<tr>
+<td align="center">安保系统</td>
+<td align="center">线缆敷设，设备安装，调试检测，验收</td>
+</tr>
+<tr>
+<td align="center">动环监控系统</td>
+<td align="center">线缆敷设，各类信号采集设备安装，监控主机安装，调试验收培训，文档整理</td>
+</tr>
+</tbody></table>
+<h3 id="施工模式"><a href="#施工模式" class="headerlink" title="施工模式"></a>施工模式</h3><ul>
+<li>PPP：Public-Private-Partnership，引入社会资本投资运营</li>
+<li>BOT：Build-OPeration-Transfer，建设-经营-转让</li>
+<li>EPC：Engineering-Procurement-Construction，工程总承包模式</li>
+<li>代建模式</li>
+</ul>
+<h2 id="数据中心相关企业"><a href="#数据中心相关企业" class="headerlink" title="数据中心相关企业"></a>数据中心相关企业</h2><ul>
+<li>供配电：维谛、艾默生、施耐德、科华、易事特等</li>
+<li>液冷(方案)：高澜、英维克、维谛、Coolit、Dynatron 等</li>
+<li>液冷(服务器)：华为、曙光数创、神威蓝光、浪潮信息、新华三、戴尔、惠普、思科等</li>
+<li>空调：美的，麦克维尔，施耐德等</li>
+</ul>
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2024-03-27</span>
+            
+                <span>该篇文章被 Starr</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/Data-Center/'>
+                            Data Center
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/Note/'>
+                            Note
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
+    
+        
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+             
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span></span>
+            
+    
+</div>
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <!--目录-->
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+        
+<script src="/js/toc.js"></script>
+
+    
+
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
+
+
+
+
+
+<script src="/js/lightgallery.min.js"></script>
+
+
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+            
+    </body>
+
+
+    <!--暗黑模式-->
+    <script src="/js/darkmode-js.min.js"></script>
+    <script>
+        function addDarkmodeWidget() {
+        const options = {
+            bottom: '53px', // default: '32px'
+            right: 'unset', // default: '32px'
+            left: '42px', // default: 'unset'
+            time: '0.3s', // default: '0.3s'
+            mixColor: '#fff', // default: '#fff'
+            backgroundColor: ' #e4e4e4 ',  // default: '#fff'
+            buttonColorDark: '#100f2c',  // default: '#100f2c'
+            buttonColorLight: '#fff', // default: '#fff'
+            saveInCookies: true, // default: true,
+            label: '🌓', // default: ''
+            autoMatchOsTheme: true // default: true
+        }
+    
+        const darkmode = new Darkmode(options);
+        darkmode.showWidget();
+        
+        }
+        window.addEventListener('load', addDarkmodeWidget);
+    </script>
+  
+</html>
