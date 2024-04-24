@@ -129,7 +129,7 @@
         <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><blockquote>
 <p>最近想应聘相关岗位，花一晚上时间整理了一些基础知识</p>
 </blockquote>
-<h2 id="主要设备构成"><a href="#主要设备构成" class="headerlink" title="主要设备构成"></a>主要设备构成</h2><p><a href="img/dcstructure.png" title="数据中心设备构成" class="gallery-item" style="box-shadow: none;"> <img src="img/dcstructure.png" alt="数据中心设备构成"></a></p>
+<h2 id="主要设备构成"><a href="#主要设备构成" class="headerlink" title="主要设备构成"></a>主要设备构成</h2><p><a href="/img/dcstructure.png" title="数据中心设备构成" class="gallery-item" style="box-shadow: none;"> <img src="/img/dcstructure.png" alt="数据中心设备构成"></a></p>
 <h3 id="机架（机柜）"><a href="#机架（机柜）" class="headerlink" title="机架（机柜）"></a>机架（机柜）</h3><ul>
 <li>标准机架高度一般为 42U，U 表示 unit，1U 等于 4.445cm</li>
 <li>机架宽度一般为 600mm 或 800mm，深度 600-1200mm 不等</li>
@@ -172,8 +172,8 @@
 <li>红外加湿器：远红外线加热水使其蒸发(节能，无堵塞阀门风险)</li>
 </ul>
 <p><strong>PUE(Power Usage Effectiveness)</strong></p>
-<script type="math/tex; mode=display">
-PUE=\frac{数据中心总能耗}{IT设备能耗}</script><p>PUE 应尽量小于 1.2</p>
+<p>$$<br>PUE&#x3D;\frac{数据中心总能耗}{IT设备能耗}<br>$$</p>
+<p>PUE 应尽量小于 1.2</p>
 <h3 id="管理监控"><a href="#管理监控" class="headerlink" title="管理监控"></a>管理监控</h3><p>动环监控(Supervision System)：动力与环境监控，实时监测和管理数据中心各机房的电源柜、UPS、空调、蓄电池等多种动力设备及门磁、红外、窗破、水浸、温湿度、烟感等机房环境的各种参数</p>
 <p>DCIM(Data Center Infrastructure Management)：管理范围更广，监控管理和控制数据中心所有 IT 主设备机配套设施</p>
 <h3 id="消防系统"><a href="#消防系统" class="headerlink" title="消防系统"></a>消防系统</h3><p>数据中心一般采用气体灭火系统，也可设置细水雾迷惑系统或自动喷水灭火系统，视机房等级而定</p>
@@ -181,7 +181,7 @@ PUE=\frac{数据中心总能耗}{IT设备能耗}</script><p>PUE 应尽量小于 
 <li>七氟丙烷灭火系统(物理化学结合，同时有物理制冷小伙，灭火效率高)</li>
 <li>IG541混合气体灭火系统(物理灭火，降低氧气浓度)</li>
 </ul>
-<h2 id="数据中心建设"><a href="#数据中心建设" class="headerlink" title="数据中心建设"></a>数据中心建设</h2><p><a href="img/dcbuilding.png" title="数据中心建设流程" class="gallery-item" style="box-shadow: none;"> <img src="img/dcbuilding.png" alt="数据中心建设流程"></a></p>
+<h2 id="数据中心建设"><a href="#数据中心建设" class="headerlink" title="数据中心建设"></a>数据中心建设</h2><p><a href="/img/dcbuilding.png" title="数据中心建设流程" class="gallery-item" style="box-shadow: none;"> <img src="/img/dcbuilding.png" alt="数据中心建设流程"></a></p>
 <h3 id="部署方式"><a href="#部署方式" class="headerlink" title="部署方式"></a>部署方式</h3><p><strong>两地三中心</strong></p>
 <ul>
 <li>生产数据中心</li>
@@ -189,38 +189,34 @@ PUE=\frac{数据中心总能耗}{IT设备能耗}</script><p>PUE 应尽量小于 
 <li>异地灾备中心</li>
 </ul>
 <p><strong>异地多活</strong></p>
-<h3 id="常见施工步骤"><a href="#常见施工步骤" class="headerlink" title="常见施工步骤"></a>常见施工步骤</h3><div class="table-container">
-<table>
+<h3 id="常见施工步骤"><a href="#常见施工步骤" class="headerlink" title="常见施工步骤"></a>常见施工步骤</h3><table>
 <thead>
 <tr>
-<th style="text-align:center">项目</th>
-<th style="text-align:center">施工步骤</th>
+<th align="center">项目</th>
+<th align="center">施工步骤</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">静电地板铺设</td>
-<td style="text-align:center">地面施工，放线，地板柱脚，调平，地板安装</td>
+<tbody><tr>
+<td align="center">静电地板铺设</td>
+<td align="center">地面施工，放线，地板柱脚，调平，地板安装</td>
 </tr>
 <tr>
-<td style="text-align:center">吊顶安装</td>
-<td style="text-align:center">放线，龙骨吊杆，主龙骨，骨架，饰板</td>
+<td align="center">吊顶安装</td>
+<td align="center">放线，龙骨吊杆，主龙骨，骨架，饰板</td>
 </tr>
 <tr>
-<td style="text-align:center">强弱电系统</td>
-<td style="text-align:center">线缆、线管、桥架敷设，设备安装，调试检测，验收</td>
+<td align="center">强弱电系统</td>
+<td align="center">线缆、线管、桥架敷设，设备安装，调试检测，验收</td>
 </tr>
 <tr>
-<td style="text-align:center">安保系统</td>
-<td style="text-align:center">线缆敷设，设备安装，调试检测，验收</td>
+<td align="center">安保系统</td>
+<td align="center">线缆敷设，设备安装，调试检测，验收</td>
 </tr>
 <tr>
-<td style="text-align:center">动环监控系统</td>
-<td style="text-align:center">线缆敷设，各类信号采集设备安装，监控主机安装，调试验收培训，文档整理</td>
+<td align="center">动环监控系统</td>
+<td align="center">线缆敷设，各类信号采集设备安装，监控主机安装，调试验收培训，文档整理</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h3 id="施工模式"><a href="#施工模式" class="headerlink" title="施工模式"></a>施工模式</h3><ul>
 <li>PPP：Public-Private-Partnership，引入社会资本投资运营</li>
 <li>BOT：Build-OPeration-Transfer，建设-经营-转让</li>
